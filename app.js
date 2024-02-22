@@ -6,6 +6,7 @@ require('dotenv').config()
 const port = process.env.PORT;
 const path = require("path");
 
+const populate = require('./Mongodb/populateDb.js')
 
 app.use(morgan('tiny'));
 app.use(express.static('public'));
@@ -24,7 +25,7 @@ app.use('/', indexRoute);
 app.use('/categories', indexCategory);
 app.use('/products', indexProduct);
 
-async function startClient(){
+async function startClient() {
     await dbManagment.getClient().connect();
     return "Connected";
 }

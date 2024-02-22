@@ -2,10 +2,10 @@
   "name": "isen-drive",
   "version": "1.0.0",
   "description": "Mini-site de gestion du catalogue d'un drive",
-  "main": "app.js",
+  "main": "./Mongodb/populateDb.js",
   "scripts": {
-    "start": "node app.js",
-    "devstart": "nodemon app.js"
+    "start": "node ./Mongodb/populateDb.js",
+    "devstart": "nodemon ./Mongodb/populateDb.js"
   },
   "keywords": [],
   "author": "",
