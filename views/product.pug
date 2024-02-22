@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  if product
+    a.item-title(href="/products/" + product._id) #{product.name}
+    br
+    div Prix: #{product.price} €
+    br
+    div Description: #{product.description}
+  else
+    p Ce produit n'existe pas
+  br
+  p
+    a.inline-10(href='/products/' + categoryId + '/delete') Supprimer le produit
+    a.inline-10(href='/products/' + categoryId + '/update') Modifier le produit
