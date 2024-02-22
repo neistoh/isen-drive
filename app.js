@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
-const port = 3000;
+require('dotenv').config()
+const port = process.env.PORT;
 const path = require("path");
 const process = require('node:process');
 
