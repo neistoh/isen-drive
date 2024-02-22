@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
+const process = require('node:process');
 require('dotenv').config()
 const port = process.env.PORT;
 const path = require("path");
-const process = require('node:process');
+
 
 app.use(morgan('tiny'));
 app.use(express.static('public'));
